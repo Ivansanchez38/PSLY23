@@ -17,9 +17,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   }
   return (
     <Carousel
-      autoPlay={true}
+      autoPlay={false}
       swipeable={true}
       showArrows={true}
+      showIndicators={false}
       useKeyboardArrows={true}
     >
       {images.map((image, index) => (
