@@ -9,9 +9,11 @@ type ImageType = {
 
 type ImageCarouselProps = {
   images: ImageType[];
+  width?: string;
 };
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
+
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width }) => {
   if (!images || images.length === 0) {
     return <div>No images to display</div>;
   }
@@ -24,7 +26,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
       useKeyboardArrows={true}
     >
       {images.map((image, index) => (
-        <div key={index} className="object-cover">
+        <div key={index} className={width}>
           <img
             src={image.url}
             alt={`Image ${index}`}
