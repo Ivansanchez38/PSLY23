@@ -16,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head><meta name="darkreader-lock"></meta></head>
       <body className="font-suss leading-[1.7] lead relative min-h-full text-base text-[#333] bg-[#fffef2]">
         <Navbar />
         <main>{children}</main>
