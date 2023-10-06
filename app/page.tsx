@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Products />
+      <Products id={1} />
+      <Products id={3} />
     </>
   );
 }
