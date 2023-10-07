@@ -11,7 +11,8 @@ const Products: React.FC<Id>  = ({ id }) => {
 
   return (
     <div className={`flex ${product.row} pt-40`}>
-      <Article id={id}/>
+    {!(typeof product.url === "object") && <Article id={id} />}
+    {/* <Article id={id}/> */}
       <Image id={id}/>
     </div>
   );

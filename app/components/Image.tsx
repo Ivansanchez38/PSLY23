@@ -195,6 +195,7 @@ import React from "react";
 import { Id } from "../data/types";
 import { products } from "../data/products";
 import ImageCarousel from "./ImageCarousel";
+import Article from "./Article";
 
 const Image: React.FC<Id> = ({ id }) => {
   const product = products.find((item) => item.id === id);
@@ -218,8 +219,13 @@ const Image: React.FC<Id> = ({ id }) => {
         )
       ) : typeof product.url === "object" &&
         Object.keys(product.url).length > 0 ? (
-        <ImageCarousel
-          images={Object.values(product.url).map((url) => ({ url }))} width={product.width}/>
+        <div className="flex bg-green-500 w-full">
+          <Article id={id} />
+          <ImageCarousel
+            images={Object.values(product.url).map((url) => ({ url }))}
+            width={product.width}
+          />
+        </div>
       ) : (
         <div>Image</div>
       )}

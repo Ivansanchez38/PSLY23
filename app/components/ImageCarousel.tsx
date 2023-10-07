@@ -24,9 +24,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width }) => {
       showArrows={true}
       showIndicators={false}
       showThumbs={false}
-      useKeyboardArrows={true}centerMode
-      centerSlidePercentage={40}
+      useKeyboardArrows={true}
       showStatus={false}
+
+      // this breaks product 5 store locator
+      centerMode
+      centerSlidePercentage={40}
     >
       {images.map((image, index) => (
         <div key={index} className={width}>
