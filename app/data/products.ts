@@ -45,6 +45,28 @@ export const products = [
   },
   {
     id: 4,
+    heading: "Parsley Seed Skin Care",
+    subHeading: "Fortification of the highest order",
+    para: "Our Parsley Seed Skin Care range provides potent doses of anti-oxidant rich ingredients in formulations suited to all skin types. They are especially recommended for those in urban environments, to fortify the skin against the damaging effects of free radicals.",
+
+    row: "flex-col md:flex-row",
+    pl: "pl-20",
+    pr: "pl-32",
+    url: {
+      url1: "https://www.aesop.com/u1nb1km7t5q7/5vuGB9OlPfCwhd0di4sqjF/8c66786e2c82846e7e86c2e234c7c0e5/Aesop_Kits_Parsley_Seed_Anti-Oxidant_Skin_Care_Kit_Web_Large_1584x962px.png",
+      url2: "https://www.aesop.com/u1nb1km7t5q7/4fclKcB1FNLpV5wHmZkAQ6/c6c62862184703d834efbc07077b86cb/Aesop_Skin_Parsley_Seed_Anti-Oxidant_Eye_Cream_10mL_Web_Large_901x478px.png",
+      url3: "https://www.aesop.com/u1nb1km7t5q7/5T3H9UXxNE9yT2Na2kjXvW/71d804effdc8b27b1aced97e1781f1ec/Aesop-Skin-Parsley-Seed-Facial-Cleansing-Oil-200mL-large.png",
+      url4: "https://www.aesop.com/u1nb1km7t5q7/4dDnzrqcgMeqKPXni0V0iV/d32a161375b1e4f21f5fe79471ef4b3c/Aesop-SkinParsley-Seed-Facial-Cleanser-100mL-large.png",
+      url5: "https://www.aesop.com/u1nb1km7t5q7/1pr54VIGFr7VyVW9UXGXm4/0eeedad1ea45c86f45ce8c724bfbc4cb/Aesop-Skin-Parsley-Seed-Anti-Oxidant-Facial-Hydrating-Cream-60mL-large.png",
+      url6: "https://www.aesop.com/u1nb1km7t5q7/27ALSA2USE1gv4VGow4S10/4342f79cf74c9ea2f9474e3ea057bde2/Aesop-Skin-Parsley-Seed-Anti-Oxidant-Hydrator-60mL-large.png",
+      url7: "https://www.aesop.com/u1nb1km7t5q7/11SkMKAwt3wKeDg1Rg63wn/0f9e8e78c8a21a7655a3d8f5c42fbdf4/Aesop_Skin_Parsley_Seed_Anti-Oxidant_Facial_Treatment_15mL_Web_Large_684x668px.png",
+      url8: "https://www.aesop.com/u1nb1km7t5q7/59ChXwSO689JxBwcTsMia2/15d4701f3ccb169b2c1de46ef38f8748/Large-PNG-Aesop-Skin-Parsley-Seed-Anti-Oxidant-Facial-Toner-100mL-large.png",
+    },
+    width: "w-1/2",
+    buttonText: "Explore the range",
+  },
+  {
+    id: 5,
     heading: "",
     subHeading: "Store locator",
     para: "Our consultants are available to host you in-store and provide tailored guidance on gift purchases.",
@@ -61,7 +83,7 @@ export const products = [
     buttonText: "Find a nearby store",
   },
   {
-    id: 5,
+    id: 6,
     heading: "Facial Appointments",
     subHeading: "Composure for the skin and senses",
     para: "For a well-rounded skin care regimen, Aesop Facial Appointments offer a series of treatments tailored to balance, stimulate and intensely nourish the skin.",

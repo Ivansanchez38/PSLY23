@@ -10,6 +10,7 @@ export default function Home() {
       <Products id={3} />
       <Products id={4} />
       <Products id={5} />
+      <Products id={6} />
     </>
   );
 }
