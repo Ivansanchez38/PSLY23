@@ -28,7 +28,7 @@ export const products = [
       url5: "https://www.aesop.com/u1nb1km7t5q7/4xJBSrjM8KCIc1c98Y2V08/38105def050ed90c4f47b58a22c32f97/Aesop_Fragrance_Miraceti_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
       url6: "https://www.aesop.com/u1nb1km7t5q7/cc3b7QvhMcApvi0MCw9Xa/c2f5d7e204d7f2e9a5be48aaf66aff3d/Aesop_Fragrance_Karst_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
     },
-    width: "w-1/2",
+    width: "w-full",
     buttonText: "See all Fragrance",
   },
   {
@@ -62,7 +62,7 @@ export const products = [
       url7: "https://www.aesop.com/u1nb1km7t5q7/11SkMKAwt3wKeDg1Rg63wn/0f9e8e78c8a21a7655a3d8f5c42fbdf4/Aesop_Skin_Parsley_Seed_Anti-Oxidant_Facial_Treatment_15mL_Web_Large_684x668px.png",
       url8: "https://www.aesop.com/u1nb1km7t5q7/59ChXwSO689JxBwcTsMia2/15d4701f3ccb169b2c1de46ef38f8748/Large-PNG-Aesop-Skin-Parsley-Seed-Anti-Oxidant-Facial-Toner-100mL-large.png",
     },
-    width: "w-1/2",
+    width: "w-full",
     buttonText: "Explore the range",
   },
   {

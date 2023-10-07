@@ -24,7 +24,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width }) => {
       showArrows={true}
       showIndicators={false}
       showThumbs={false}
-      useKeyboardArrows={true}
+      useKeyboardArrows={true}centerMode
+      centerSlidePercentage={40}
     >
       {images.map((image, index) => (
         <div key={index} className={width}>
