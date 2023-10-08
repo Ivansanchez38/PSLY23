@@ -22,3 +22,28 @@
     clip-path 0.2s cubic-bezier(0.645, 0.045, 0.355, 1),
     -webkit-clip-path 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
+.btttn {
+  @apply relative appearance-none bg-transparent cursor-pointer text-sm leading-[1.4] no-underline p-0 border-0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: Suisse, sans-serif;
+  outline: none;
+}
+
+.prev1 {
+  @apply w-20 h-20;
+  transform: translate3d(80px, 0, 0);
+}
+.prev2 {
+  @apply absolute z-[60] top-[calc(50%_-_80px)] flex w-[60px] h-[60px] items-center justify-center bg-[#333] pointer-events-auto transition-transform duration-[0.5s] ease-[cubic-bezier(.215,0.61,0.355,1)] left-0;
+}
+
+.next1 {
+  @apply w-20 h-20;
+  transform: translate3d(80px, 0, 0);
+}
+
+.next2 {
+  @apply absolute z-[60] top-[calc(50%_-_80px)] flex w-[60px] h-[60px] items-center justify-center bg-[#333] pointer-events-auto transition-all duration-[0.5s] ease-[cubic-bezier(.215,0.61,0.355,1)] right-0;
+}

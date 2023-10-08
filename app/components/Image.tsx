@@ -202,7 +202,7 @@ const Image: React.FC<Id> = ({ id }) => {
   if (!product) return <div>Image</div>;
 
   return (
-    <div className={`w-[66.6666666%] ${product.pr}`}>
+    <div className={`w-[66.6666666%] ${product.pr} group`}>
       {typeof product.url === "string" ? (
         product.url === "" ? (
           <video className="w-full h-full" autoPlay muted loop>
