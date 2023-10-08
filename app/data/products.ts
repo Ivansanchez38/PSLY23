@@ -29,6 +29,7 @@ export const products = [
       url6: "https://www.aesop.com/u1nb1km7t5q7/cc3b7QvhMcApvi0MCw9Xa/c2f5d7e204d7f2e9a5be48aaf66aff3d/Aesop_Fragrance_Karst_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
     },
     width: "w-full",
+    scroller: true,
     buttonText: "See all Fragrance",
   },
   {
@@ -63,6 +64,7 @@ export const products = [
       url8: "https://www.aesop.com/u1nb1km7t5q7/59ChXwSO689JxBwcTsMia2/15d4701f3ccb169b2c1de46ef38f8748/Large-PNG-Aesop-Skin-Parsley-Seed-Anti-Oxidant-Facial-Toner-100mL-large.png",
     },
     width: "w-full",
+    scroller: true,
     buttonText: "Explore the range",
   },
   {
@@ -80,6 +82,7 @@ export const products = [
       url3: "https://www.aesop.com/u1nb1km7t5q7/iC1baQuIzXXC6Ho3lZSFW/1226a07142e70fec26df3f0b72578cbd/Aesop_HK_Store_IFC_III_Hero_Bleed_Desktop_2880x1620px.jpg",
     },
     width: "object-cover",
+    scroller: false,
     buttonText: "Find a nearby store",
   },
   {

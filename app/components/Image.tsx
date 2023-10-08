@@ -219,13 +219,13 @@ const Image: React.FC<Id> = ({ id }) => {
         )
       ) : typeof product.url === "object" &&
         Object.keys(product.url).length > 0 ? (
-        <div className="flex bg-green-500 w-full">
-          <Article id={id} />
+        // <div className="flex bg-green-500 w-full">
+        //   <Article id={id} />
           <ImageCarousel
             images={Object.values(product.url).map((url) => ({ url }))}
-            width={product.width}
+            width={product.width} scroller={product.scroller}
           />
-        </div>
+        // </div> 
       ) : (
         <div>Image</div>
       )}

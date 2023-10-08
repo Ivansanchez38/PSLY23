@@ -10,13 +10,15 @@ type ImageType = {
 type ImageCarouselProps = {
   images: ImageType[];
   width?: string;
+  scroller?: boolean;
 };
 
 
-const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width }) => {
-  if (!images || images.length === 0) {
-    return <div>No images to display</div>;
-  }
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width, scroller = false }) => {
+  if (!images || images.length === 0) return <div>No images to display</div>;
+
+  const centerSlidePercentage = scroller ? 40 : 100;
+
   return (
     <Carousel
       autoPlay={false}
@@ -27,9 +29,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width }) => {
       useKeyboardArrows={true}
       showStatus={false}
 
-      // this breaks product 5 store locator
       centerMode
-      centerSlidePercentage={40}
+      centerSlidePercentage={centerSlidePercentage}
     >
       {images.map((image, index) => (
         <div key={index} className={width}>
@@ -38,6 +39,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, width }) => {
             alt={`Image ${index}`}
             className="w-full h-full"
           />
+          {scroller && <p>Lorem ipsum dolor sit amet.</p>}
+          <p>Lorem ipsum dolor sit amet.</p>
         </div>
       ))}
     </Carousel>
