@@ -35,6 +35,7 @@ const Image: React.FC<Id> = ({ id }) => {
           width={product.width}
           height={product.height}
           scroller={product.scroller}
+          loop={product.loop}
         />
       ) : (
         // </div>

@@ -15,6 +15,7 @@ type ImageCarouselProps = {
   scroller?: boolean;
   productH2?: Record<number, string>;
   productH4?: Record<number, string>;
+  loop?: boolean;
 };
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
@@ -24,6 +25,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   width,
   height,
   scroller = false,
+  loop = false
 }) => {
   const [isPulseAnimating, setIsPulseAnimating] = useState(false);
   const handleArrowClick = () => {
@@ -44,13 +46,14 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         clickHandler();
         handleArrowClick();
       }}
-      className="hidden group-hover:block"
+      className="hidden group-hover:block select-none"
     >
       <SliderButton arrowIcon={arrowIcon} />
     </button>
   );
 
   return (
+    <>
     <Carousel
       autoPlay={false}
       swipeable={true}
@@ -59,6 +62,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       showThumbs={false}
       useKeyboardArrows={true}
       showStatus={false}
+      infiniteLoop={loop}
       centerMode
       centerSlidePercentage={centerSlidePercentage}
       renderArrowPrev={(clickHandler, hasPrev) =>
@@ -101,6 +105,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         </div>
       ))}
     </Carousel>
+    <div className={` ${4 === 4 ? "swiper-scrollbar" : ""}`}></div></>
   );
 };
 

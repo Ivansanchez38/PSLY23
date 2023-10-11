@@ -13,6 +13,7 @@ export type ProductType = {
   productH2?: Record<number, string>;
   productH4?: Record<number, string>;
   height?: string;
+  loop?: boolean;
 }
 
 export const products: ProductType[] = [
@@ -138,6 +139,7 @@ export const products: ProductType[] = [
     width: "object-cover",
     scroller: false,
     buttonText: "Find a nearby store",
+    loop: true
   },
   {
     id: 6,
