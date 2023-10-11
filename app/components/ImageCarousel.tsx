@@ -13,10 +13,14 @@ type ImageCarouselProps = {
   width?: string;
   height?: string;
   scroller?: boolean;
+  productH2?: Record<number, string>;
+  productH4?: Record<number, string>;
 };
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
+  productH2,
+  productH4,
   width,
   height,
   scroller = false,
@@ -64,30 +68,36 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         hasNext && renderArrowButton(clickHandler, "next")
       }
     >
-    {images.map((image, index) => (
-      <div
-        key={index}
-        className={`${width} bg-sate-500 ${height} flex flex-col justify-end text-center`}
-      >
-        <img
-          src={image.url}
-          alt={`Image ${index}`}
-          className="h-auto w-auto"
-        />
-        {!scroller ? (
-          <p
-            className={`text-left ${isPulseAnimating ? "animate-pulse" : ""}`}
-          >
-            Lorem ipsum dolor sit amet.
-          </p>
-        ) : (
-          // <p className="text-left animate-pulse">Lorem ipsum dolor sit amet.</p>
-
-          <>
-            <h2 className="hover:underline font-semibold text-sm">Lorem ipsum dolor sit.</h2>
-            <h4 className="font-extralight text-sm text-gray-500 ">Lorem ipsum dolor sit.</h4>
-          </>
-        )}
+      {images.map((image, index) => (
+        <div
+          key={index}
+          className={`${width} bg-sate-500 ${height} flex flex-col justify-end text-center`}
+        >
+          <img
+            src={image.url}
+            alt={`Image ${index}`}
+            className="h-auto w-auto"
+          />
+          {!scroller ? (
+            <p
+              className={`text-left ${isPulseAnimating ? "animate-pulse" : ""}`}
+            >
+              Lorem ipsum dolor sit amet.
+            </p>
+          ) : (
+            <>
+              {productH2 && productH4 && (
+                <div>
+                  <h2 className="hover:underline font-semibold text-sm pb-2">
+                    {productH2[index]}
+                  </h2>
+                  <h4 className="font-extralight text-sm">
+                    {productH4[index]}
+                  </h4>
+                </div>
+              )}
+            </>
+          )}
         </div>
       ))}
     </Carousel>

@@ -1,4 +1,21 @@
-export const products = [
+export type ProductType = {
+  id: number;
+  heading?: string;
+  subHeading: string;
+  para: string;
+  row: string;
+  pl: string;
+  pr: string;
+  url?: string | Record<string, string>;
+  buttonText: string;
+  width?: string;
+  scroller?: boolean;
+  productH2?: Record<number, string>;
+  productH4?: Record<number, string>;
+  height?: string;
+}
+
+export const products: ProductType[] = [
   {
     id: 1,
     heading: "The Athenaeum",
@@ -27,6 +44,22 @@ export const products = [
       url4: "https://www.aesop.com/u1nb1km7t5q7/J4lTP53G5Qg3MtFjmhnRW/945d6746058105e97c0552e3b0fbf54b/Aesop_Fragrance_Eremia_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
       url5: "https://www.aesop.com/u1nb1km7t5q7/4xJBSrjM8KCIc1c98Y2V08/38105def050ed90c4f47b58a22c32f97/Aesop_Fragrance_Miraceti_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
       url6: "https://www.aesop.com/u1nb1km7t5q7/cc3b7QvhMcApvi0MCw9Xa/c2f5d7e204d7f2e9a5be48aaf66aff3d/Aesop_Fragrance_Karst_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
+    },
+    productH2: {
+      0: "Ouranon Eau de Parfum",
+      1: "Gloam Eau de Parfum",
+      2: "Eidesis Eau de Parfum",
+      3: "Erémia Eau de Parfum",
+      4: "Miraceti Eau de Parfum",
+      5: "Karst Eau de Parfum",
+    },
+    productH4: {
+      0: "Woody, spicy, resinous",
+      1: "Floral, spicy, green",
+      2: "Woody, spicy, ambery",
+      3: "A green, floral, citrus fragrance",
+      4: "Resinous, woody, spicy fragrance",
+      5: "Fresh, herbaceous, marine fragrance",
     },
     width: "w-full",
     scroller: true,
@@ -64,24 +97,24 @@ export const products = [
       url8: "https://www.aesop.com/u1nb1km7t5q7/59ChXwSO689JxBwcTsMia2/15d4701f3ccb169b2c1de46ef38f8748/Large-PNG-Aesop-Skin-Parsley-Seed-Anti-Oxidant-Facial-Toner-100mL-large.png",
     },
     productH2: {
-      1: "Parsley Seed Anti-Oxidant Skin Care Kit",
-      2: "Parsley Seed Anti-Oxidant Eye Cream",
-      3: "Parsley Seed Facial Cleansing Oil",
-      4: "Parsley Seed Facial Cleanser",
-      5: "Parsley Seed Anti-Oxidant Facial Hydrating Cream",
-      6: "Parsley Seed Facial Cleanser",
-      7: "Parsley Seed Anti-Oxidant Facial Treatment",
-      8: "Parsley Seed Anti-Oxidant Facial Toner",
+      0: "Parsley Seed Anti-Oxidant Skin Care Kit",
+      1: "Parsley Seed Anti-Oxidant Eye Cream",
+      2: "Parsley Seed Facial Cleansing Oil",
+      3: "Parsley Seed Facial Cleanser",
+      4: "Parsley Seed Anti-Oxidant Facial Hydrating Cream",
+      5: "Parsley Seed Facial Cleanser",
+      6: "Parsley Seed Anti-Oxidant Facial Treatment",
+      7: "Parsley Seed Anti-Oxidant Facial Toner",
     },
     productH4: {
-      1: "A trio of Parsley Seed staples",
-      2: "Nourishes delicate skin around eyes",
-      3: "Gently liberates skin of grime and makeup",
-      4: "For those in polluted urban environments",
-      5: "A potent, nourishing cream",
-      6: "For those in polluted urban environments",
-      7: "Fortifies, revives and intensely hydrates",
-      8: "For normal, dry, or sensitive skin",
+      0: "A trio of Parsley Seed staples",
+      1: "Nourishes delicate skin around eyes",
+      2: "Gently liberates skin of grime and makeup",
+      3: "For those in polluted urban environments",
+      4: "A potent, nourishing cream",
+      5: "For those in polluted urban environments",
+      6: "Fortifies, revives and intensely hydrates",
+      7: "For normal, dry, or sensitive skin",
     },
     width: "w-full",
     height: "h-[460px]",

@@ -28,14 +28,16 @@ const Image: React.FC<Id> = ({ id }) => {
         Object.keys(product.url).length > 0 ? (
         // <div className="flex bg-green-500 w-full">
         //   <Article id={id} />
-          <ImageCarousel
-            images={Object.values(product.url).map((url) => ({ url }))}
-            width={product.width}
-            height={product.height}
-            scroller={product.scroller}
-          />
-        // </div> 
+        <ImageCarousel
+          images={Object.values(product.url).map((url) => ({ url }))}
+          productH2={product.productH2}
+          productH4={product.productH4}
+          width={product.width}
+          height={product.height}
+          scroller={product.scroller}
+        />
       ) : (
+        // </div>
         <div>Image</div>
       )}
     </div>
