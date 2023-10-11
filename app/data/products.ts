@@ -13,10 +13,29 @@ export type ProductType = {
   productH2?: Record<number, string>;
   productH4?: Record<number, string>;
   height?: string;
+  play?: boolean;
   loop?: boolean;
 }
 
 export const products: ProductType[] = [
+  {
+    id: 0,
+    heading: "The Athenaeum",
+    subHeading: "Ouranon: the sixth Othertopias fragrance",
+    para: "Each of the six Othertopias fragrances is a doorway to another realm, real and imagined. Ouranon—a woody, spicy, resinous scent, distinguished by Frankincense, Hay and Myrrh—is the final chapter of that journey.",
+
+    row: "flex-col md:flex-row",
+    pl: "pl-20",
+    pr: "pl-32",
+    url: {
+      url1: "https://www.aesop.com/u1nb1km7t5q7/u3xwLdwyHOhnFjFDnp9xh/78ae09241ad257722205bb61089ab46a/Aesop_Othertopias_2023_Web_Homepage_3_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
+      url2: "https://www.aesop.com/u1nb1km7t5q7/6gh1BfrwUWExsAYoI9MhxK/56b784ae98ed3421486a09e0c112bdea/Aesop_Bar_Soaps_2023_Web_Homepage_1_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
+      url3: "https://www.aesop.com/u1nb1km7t5q7/4SUhr7BGma03r1oHxGHgpY/736e8b4997372edbecf26d60044caabf/Aesop_PSAOIS_2023_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg",
+    },
+    buttonText: "Step inside Ouranon",
+    play: true,
+    loop: true
+  },
   {
     id: 1,
     heading: "The Athenaeum",

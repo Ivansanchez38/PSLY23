@@ -9,12 +9,13 @@ type ImageType = {
 };
 
 type ImageCarouselProps = {
-  images: ImageType[];
+  images?: ImageType[];
   width?: string;
   height?: string;
   scroller?: boolean;
   productH2?: Record<number, string>;
   productH4?: Record<number, string>;
+  play?: boolean;
   loop?: boolean;
 };
 
@@ -25,6 +26,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   width,
   height,
   scroller = false,
+  play = false,
   loop = false
 }) => {
   const [isPulseAnimating, setIsPulseAnimating] = useState(false);
@@ -53,9 +55,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   );
 
   return (
-    <>
     <Carousel
-      autoPlay={false}
+      autoPlay={play}
       swipeable={true}
       showArrows={true}
       showIndicators={false}
@@ -63,6 +64,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       useKeyboardArrows={true}
       showStatus={false}
       infiniteLoop={loop}
+      interval={5000}
       centerMode
       centerSlidePercentage={centerSlidePercentage}
       renderArrowPrev={(clickHandler, hasPrev) =>
@@ -75,7 +77,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       {images.map((image, index) => (
         <div
           key={index}
-          className={`${width} bg-sate-500 ${height} flex flex-col justify-end text-center`}
+          className={`${width} ${height} flex flex-col justify-end text-center`}
         >
           <img
             src={image.url}
@@ -105,7 +107,6 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
         </div>
       ))}
     </Carousel>
-    <div className={` ${4 === 4 ? "swiper-scrollbar" : ""}`}></div></>
   );
 };
 
