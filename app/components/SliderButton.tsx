@@ -7,7 +7,7 @@ const SliderButton = ({ arrowIcon }: { arrowIcon: string }) => {
 
   return (
     <div
-      className={`bg-[#333] px-8 py-8 absolute top-1/2 transform -translate-y-1/2 flex items-center z-50 ${buttonPosition}`}
+      className={`bg-[#333] px-9 py-7 absolute top-1/2 transform -translate-y-1/2 flex items-center z-50 ${buttonPosition}`}
     >
       {arrowIcon === "previous" ? icons[0].prev : icons[0].next}
     </div>
