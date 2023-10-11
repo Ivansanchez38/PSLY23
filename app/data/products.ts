@@ -25,7 +25,7 @@ export const products: ProductType[] = [
     para: "Each of the six Othertopias fragrances is a doorway to another realm, real and imagined. Ouranon—a woody, spicy, resinous scent, distinguished by Frankincense, Hay and Myrrh—is the final chapter of that journey.",
 
     row: "flex-col md:flex-row",
-    pl: "pl-20",
+    pl: "pr-20",
     pr: "pl-32",
     url: {
       url1: "https://www.aesop.com/u1nb1km7t5q7/u3xwLdwyHOhnFjFDnp9xh/78ae09241ad257722205bb61089ab46a/Aesop_Othertopias_2023_Web_Homepage_3_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
