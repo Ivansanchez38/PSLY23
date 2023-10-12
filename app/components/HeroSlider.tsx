@@ -13,7 +13,6 @@ type HeroSliderProps = {
 };
 
 const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
-  console.log(images);
   if (!images || images.length === 0) return <div>No images to display</div>;
   return (
     <Carousel
