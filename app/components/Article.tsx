@@ -19,7 +19,7 @@ const Article: React.FC<Id>  = ({ id }) => {
       <div className="pr-4 text-base">
         <p className="text-base leading-[1.7]">{product.para}</p>
       </div>
-      <Button text={product.buttonText} />
+      <Button text={product.buttonText} hero={product.hero} />
     </div>
   );
 };
