@@ -1,5 +1,6 @@
 export type Id ={
   id: number,
+  index?: boolean;
 }
 
 export type Row = {
