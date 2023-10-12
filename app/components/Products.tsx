@@ -11,14 +11,13 @@ const Products: React.FC<Id> = ({ id }) => {
 
   return (
     <div className={`flex ${product.row} ${id > 0 ? "pt-40" : "pt-0"}`}>
-      {/* {!(typeof product.url === "object") && <Article id={id} />} */}
-      {id >= 1 && id <= 6 ? (
+      {id === 0 ? (
+        <Hero />
+      ) : (
         <>
           <Article id={id} />
           <Image id={id} />
         </>
-      ) : (
-        <Hero />
       )}
     </div>
   );
