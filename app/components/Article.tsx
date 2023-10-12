@@ -3,7 +3,7 @@ import Button from "./Button";
 import { Id } from "../data/types";
 import { products } from "../data/products"
 
-const Article: React.FC<Id>  = ({ id }) => {
+const Article: React.FC<Id>  = ({ id, index }) => {
 
   const product = products.find((item) => item.id === id);
   if (!product) return <div>Image</div>;
@@ -19,7 +19,7 @@ const Article: React.FC<Id>  = ({ id }) => {
       <div className="pr-4 text-base">
         <p className="text-base leading-[1.7]">{product.para}</p>
       </div>
-      <Button text={product.buttonText} hero={product.hero} />
+      <Button text={product.buttonText} hero={product.hero} index={index} />
     </div>
   );
 };
