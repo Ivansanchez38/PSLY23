@@ -5,7 +5,7 @@ export type ProductType = {
   para: string;
   row: string;
   pl: string;
-  pr: string;
+  pr?: string;
   url?: string | Record<string, string>;
   buttonText: string;
   width?: string;
@@ -26,7 +26,6 @@ export const products: ProductType[] = [
 
     row: "flex-col md:flex-row",
     pl: "pr-20",
-    pr: "pl-32",
     url: {
       url1: "https://www.aesop.com/u1nb1km7t5q7/u3xwLdwyHOhnFjFDnp9xh/78ae09241ad257722205bb61089ab46a/Aesop_Othertopias_2023_Web_Homepage_3_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
       url2: "https://www.aesop.com/u1nb1km7t5q7/6gh1BfrwUWExsAYoI9MhxK/56b784ae98ed3421486a09e0c112bdea/Aesop_Bar_Soaps_2023_Web_Homepage_1_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
