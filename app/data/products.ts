@@ -1,14 +1,14 @@
 export type ProductType = {
   id: number;
-  heading?: string;
-  subHeading: string;
-  para: string;
+  heading?: string | Record<string, string>;
+  subHeading: string | Record<string, string>;
+  para: string | Record<string, string>;
   row: string;
   pl: string;
   pr?: string;
   hero?: boolean;
   url?: string | Record<string, string>;
-  buttonText: string;
+  buttonText: string | Record<string, string>;
   width?: string;
   scroller?: boolean;
   productH2?: Record<number, string>;
@@ -16,14 +16,26 @@ export type ProductType = {
   height?: string;
   play?: boolean;
   loop?: boolean;
-}
+};
 
 export const products: ProductType[] = [
   {
     id: 0,
-    heading: "A new Othertopias fragrance",
-    subHeading: "Ouranon Eau de Parfum",
-    para: "A fragrance that evokes a silent monolith, the last vestige of a stone circle whose meaning has been lost to time—earthy minerality commingling with Frankincense, Hay and Myrrh.",
+    heading: {
+      0: "A new Othertopias fragrance",
+      1: "Hand and Body Care",
+      2: "Supporting city skin",
+    },
+    subHeading: {
+      0: "Ouranon Eau de Parfum",
+      1: "Buoyant bodies",
+      2: "Parsley Seed Anti-Oxidant Intense Serum",
+    },
+    para: {
+      0: "A fragrance that evokes a silent monolith, the last vestige of a stone circle whose meaning has been lost to time—earthy minerality commingling with Frankincense, Hay and Myrrh.",
+      1: "Three joyful elements of bathing—cleansing, scrubbing and hydrating—are facilitated by formulations boasting a variety of benefits and aromas, ensuring optimal satisfaction for all.",
+      2: "Explore how this anti-oxidant-rich serum hydrates, replenishes and fortifies the skin via a suite of ingredients selected with urban dwellers in mind.",
+    },
 
     row: "flex-col md:flex-row",
     pl: "pr-20",
@@ -34,9 +46,13 @@ export const products: ProductType[] = [
       url3: "https://www.aesop.com/u1nb1km7t5q7/4SUhr7BGma03r1oHxGHgpY/736e8b4997372edbecf26d60044caabf/Aesop_PSAOIS_2023_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg",
     },
     width: "w-full",
-    buttonText: "Discover Ouranon",
+    buttonText: {
+      0: "Discover Ourano",
+      1: "Discover Body & Hand Care",
+      2: "Discover the formulation",
+    },
     play: true,
-    loop: true
+    loop: true,
   },
   {
     id: 1,
@@ -160,7 +176,7 @@ export const products: ProductType[] = [
     width: "object-cover",
     scroller: false,
     buttonText: "Find a nearby store",
-    loop: true
+    loop: true,
   },
   {
     id: 6,
