@@ -6,6 +6,7 @@ import SliderButton from "./SliderButton";
 
 type ImageCarouselProps = {
   images?: { url: string }[];
+  title?: Record<number, string>;
   width?: string;
   height?: string;
   scroller?: boolean;
@@ -17,6 +18,7 @@ type ImageCarouselProps = {
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
+  title,
   productH2,
   productH4,
   width,
@@ -82,13 +84,13 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
             alt={`Image ${index}`}
             className="h-auto w-auto"
           />
-          {!scroller ? (
+          {!scroller && title ? (
             <p
               className={`text-left ${
                 !opacity ? "opacity-0" : "opacity-100"
               } transition-opacity duration-200`}
             >
-              Aesop Fashion Walk
+              {title[index]}
             </p>
           ) : (
             <>

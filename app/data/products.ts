@@ -8,6 +8,7 @@ export type ProductType = {
   pr?: string;
   hero?: boolean;
   url?: string | Record<string, string>;
+  title?: Record<number, string>;
   buttonText: string | Record<string, string>;
   sliderButton?: boolean;
   width?: string;
@@ -175,6 +176,11 @@ export const products: ProductType[] = [
       url1: "https://www.aesop.com/u1nb1km7t5q7/5U8aDtbYkybIgilkq1tJ7w/41bdf1c8b1eb863fd9ac7cde0ee1c64a/Aesop_Fashion_Walk_II_Mid_Desktop_2560x1440px.jpg",
       url2: "https://www.aesop.com/u1nb1km7t5q7/4StXXhzwKgYMIFgTSIOgUk/8c3406be7d5c1194b0e267b773fa66e6/Aesop_MOKO_II_Mid_Desktop_2560x1440px.jpg",
       url3: "https://www.aesop.com/u1nb1km7t5q7/iC1baQuIzXXC6Ho3lZSFW/1226a07142e70fec26df3f0b72578cbd/Aesop_HK_Store_IFC_III_Hero_Bleed_Desktop_2880x1620px.jpg",
+    },
+    title: {
+      0: "Aesop Fashion Walk",
+      1: "Aesop MOKO",
+      2: "Aesop ifc mall",
     },
     width: "object-cover",
     scroller: false,

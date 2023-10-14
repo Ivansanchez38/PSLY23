@@ -30,6 +30,7 @@ const Image: React.FC<Id> = ({ id }) => {
         //   <Article id={id} />
         <ImageCarousel
           images={Object.values(product.url).map((url) => ({ url }))}
+          title={product.title}
           productH2={product.productH2}
           productH4={product.productH4}
           width={product.width}
