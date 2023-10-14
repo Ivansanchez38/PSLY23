@@ -36,7 +36,7 @@ const Button: React.FC<ButtonProps> = ({
       >
         <span
           className={`${
-            sliderButton ? "text-base opacity-80" : "text-sm font-semibold"
+            sliderButton ? "text-base opacity-95" : "text-sm font-semibold"
           }`}
         >
           {text}
@@ -44,7 +44,7 @@ const Button: React.FC<ButtonProps> = ({
         <div
           className={`${
             sliderButton
-              ? ""
+              ? "opacity-80"
               : heroSlide
               ? "fill-white group-hover:fill-black"
               : "fill-black group-hover:fill-[#fffef2]"
