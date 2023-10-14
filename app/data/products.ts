@@ -9,6 +9,7 @@ export type ProductType = {
   hero?: boolean;
   url?: string | Record<string, string>;
   buttonText: string | Record<string, string>;
+  sliderButton?: boolean;
   width?: string;
   scroller?: boolean;
   productH2?: Record<number, string>;
@@ -102,6 +103,7 @@ export const products: ProductType[] = [
     width: "w-full",
     scroller: true,
     buttonText: "See all Fragrance",
+    sliderButton: true
   },
   {
     id: 3,
@@ -158,6 +160,7 @@ export const products: ProductType[] = [
     height: "h-[460px]",
     scroller: true,
     buttonText: "Explore the range",
+    sliderButton: true
   },
   {
     id: 5,

@@ -48,7 +48,7 @@ const Article: React.FC<Id> = ({ id, index }) => {
       <div className="pr-4 text-base">
         <p className="text-base leading-[1.7]">{para}</p>
       </div>
-      <Button text={buttonText} hero={product.hero} index={index} />
+      <Button text={buttonText} hero={product.hero} index={index} sliderButton={product.sliderButton} />
     </div>
   );
 };
