@@ -1,7 +1,7 @@
 import React from "react";
 import { Id } from "../data/types";
 import Article from "./Article";
-import Image from "./Image";
+import Still from "./Still";
 import { products } from "../data/products";
 import Hero from "./Hero";
 
@@ -16,7 +16,7 @@ const Products: React.FC<Id> = ({ id }) => {
       ) : (
         <>
           <Article id={id} />
-          <Image id={id} />
+          <Still id={id} />
         </>
       )}
     </div>

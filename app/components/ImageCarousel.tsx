@@ -27,9 +27,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   play = false,
   loop = false,
 }) => {
-  if (!images || images.length === 0) return <div>No images to display</div>;
-
   const [opacity, setOpacity] = useState(true);
+
+  if (!images || images.length === 0) return <div>No images to display</div>;
 
   const handleArrowClick = () => {
     setTimeout(() => {
@@ -86,7 +86,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           />
           {!scroller && title ? (
             <p
-              className={`text-left ${
+              className={`text-left pt-4 ${
                 !opacity ? "opacity-0" : "opacity-100"
               } transition-opacity duration-200`}
             >
