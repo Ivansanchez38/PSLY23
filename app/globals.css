@@ -47,3 +47,73 @@
 .next2 {
   @apply absolute z-[60] top-[calc(50%_-_80px)] flex w-[60px] h-[60px] items-center justify-center bg-[#333] pointer-events-auto transition-all duration-[0.5s] ease-[cubic-bezier(.215,0.61,0.355,1)] right-0;
 }
+
+
+#footer {
+  @apply bg-[#252525] px-[7vh] py-[10vh];
+}
+.footer-section {
+  @apply grid grid-cols-[2fr_1fr_1fr_1fr] gap-[35px] mt-5;
+}
+.footer-div-one div:nth-child(1) {
+  @apply flex items-center text-[white] gap-5 border p-2 rounded-[0.2em] border-solid border-[white];
+}
+.footer-div-one div:nth-child(1) input {
+  @apply flex-1 text-[white] bg-transparent text-[1.2em] border-[none];
+}
+.footer-div-one div:nth-child(1) input::placeholder {
+  @apply text-[white];
+}
+.footer-div-one > div:nth-child(2) {
+  @apply flex gap-[7px] text-[white] mt-5;
+}
+.footer-div-one div:nth-child(2) aside {
+  @apply w-[18px] h-2 border m-1 border-solid border-[white];
+}
+.footer-div-one > div:nth-child(2) div p {
+  @apply text-[0.85em] mb-5;
+}
+.footer-div-one > div:nth-child(2) div h6 {
+  @apply text-[0.7em] underline;
+}
+.footer-normal-div {
+  @apply text-[white];
+}
+.footer-normal-div h5 {
+  @apply text-[0.9em] pb-[22px] border-b-[white] border-b border-solid;
+}
+.footer-normal-div p {
+  @apply text-[0.85em] mt-[17px];
+}
+#footer-bottom-most {
+  @apply bg-[#252525] text-[white] mt-1 px-[3vw] py-[30px];
+}
+.for-sm {
+  @apply block;
+}
+.for-lg {
+  @apply hidden;
+}
+@media only screen and (max-width: 768px) {
+  #footer {
+    @apply bg-[#252525] px-[2vh] py-[10vh];
+  }
+  .footer-section {
+    @apply grid grid-cols-[1fr_1fr] mt-[30px];
+  }
+  .footer-div-one {
+    @apply row-span-full;
+  }
+  .footer-normal-div h5 {
+    @apply text-[0.8em] pb-[13px];
+  }
+  .footer-normal-div p {
+    @apply text-[0.74em];
+  }
+  .for-sm {
+    @apply hidden;
+  }
+  .for-lg {
+    @apply block;
+  }
+}
