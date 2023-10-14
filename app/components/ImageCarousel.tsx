@@ -4,12 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import SliderButton from "./SliderButton";
 
-type ImageType = {
-  url: string;
-};
-
 type ImageCarouselProps = {
-  images?: ImageType[];
+  images?: { url: string }[];
   width?: string;
   height?: string;
   scroller?: boolean;
@@ -27,16 +23,18 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   height,
   scroller = false,
   play = false,
-  loop = false
+  loop = false,
 }) => {
-  const [isPulseAnimating, setIsPulseAnimating] = useState(false);
-  const handleArrowClick = () => {
-    setIsPulseAnimating(true);
-    setTimeout(() => {
-      setIsPulseAnimating(false);
-    }, 800);
-  };
   if (!images || images.length === 0) return <div>No images to display</div>;
+
+  const [opacity, setOpacity] = useState(true);
+
+  const handleArrowClick = () => {
+    setTimeout(() => {
+      setOpacity(true);
+    }, 500);
+    setOpacity(false);
+  };
 
   const centerSlidePercentage = scroller ? 40 : 100;
   const renderArrowButton = (
@@ -86,9 +84,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           />
           {!scroller ? (
             <p
-              className={`text-left ${isPulseAnimating ? "animate-pulse" : ""}`}
+              className={`text-left ${
+                !opacity ? "opacity-0" : "opacity-100"
+              } transition-opacity duration-200`}
             >
-              Lorem ipsum dolor sit amet.
+              Aesop Fashion Walk
             </p>
           ) : (
             <>
