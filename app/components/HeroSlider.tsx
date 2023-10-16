@@ -14,6 +14,7 @@ type HeroSliderProps = {
 };
 
 const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
+  const [autoPlay, setAutoPlay] = useState(true);
   const [clickPrev, setClickPrev] = useState<() => () => void | null>(() => () => null);
   const [clickNext, setClickNext] = useState<() => void | null>(() => () => null);
 
@@ -22,7 +23,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   return (
     <>
       <Carousel
-        autoPlay={true}
+        autoPlay={autoPlay}
         swipeable={true}
         showArrows={false}
         showIndicators={false}
@@ -75,6 +76,8 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
         clickPrev={clickPrev}
         clickNext={clickNext}
         heroButton={true}
+        autoPlay={autoPlay}
+        setAutoPlay={setAutoPlay}
       />
     </>
   );
