@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import ArticleButton from "./ArticleButton";
 import { Id } from "../data/types";
 import { products } from "../data/products";
 
@@ -48,7 +48,7 @@ const Article: React.FC<Id> = ({ id, index }) => {
       <div className="pr-4 text-base">
         <p className="text-base leading-[1.7]">{para}</p>
       </div>
-      <Button text={buttonText} hero={product.hero} index={index} sliderButton={product.sliderButton} />
+      <ArticleButton text={buttonText} hero={product.hero} index={index} sliderButton={product.sliderButton} />
     </div>
   );
 };

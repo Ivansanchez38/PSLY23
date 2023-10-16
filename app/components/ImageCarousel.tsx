@@ -39,10 +39,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   };
 
   const centerSlidePercentage = scroller ? 40 : 100;
-  const renderArrowButton = (
-    clickHandler: { (): void; (): void; (): void },
-    arrowIcon: string
-  ) => (
+  const renderArrowButton = ( clickHandler: () => void,arrowIcon: string ) => (
     <button
       onClick={() => {
         clickHandler();
