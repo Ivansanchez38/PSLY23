@@ -8,6 +8,9 @@ type SliderButtonType = {
   heroButton?: boolean;
   autoPlay?: boolean;
   setAutoPlay?: (value: boolean) => void;
+  totalIndex?: number;
+  currentIndex?: number;
+  setCurrentIndex?: (value: number) => void;
 };
 
 const SliderButton: React.FC<SliderButtonType> = ({
@@ -17,6 +20,9 @@ const SliderButton: React.FC<SliderButtonType> = ({
   heroButton,
   autoPlay,
   setAutoPlay,
+  totalIndex,
+  currentIndex,
+  setCurrentIndex,
 }) => {
   const buttonPosition = arrowIcon === "previous" ? "left-0" : "right-0";
 
@@ -24,17 +30,44 @@ const SliderButton: React.FC<SliderButtonType> = ({
     setAutoPlay!(!autoPlay);
   };
 
+  const addIndex = () => {
+    if (currentIndex && totalIndex) {
+      setCurrentIndex!((currentIndex % totalIndex) + 1);
+    }
+  };
+
+  const removeIndex = () => {
+    if (currentIndex && totalIndex) {
+      setCurrentIndex!(currentIndex === 1 ? totalIndex : currentIndex - 1);
+    }
+  };
+
+  const handlePrev = () => {
+    clickPrev && clickPrev();
+    removeIndex();
+  };
+
+  const handleNext = () => {
+    clickNext && clickNext();
+    addIndex();
+  };
+
   return heroButton ? (
     <div className="block select-none">
       <div className="absolute z-50 -bottom-30 bg-[#fffef2] w-[99%]">
-        <div className="pt-4 flex justify-center space-x-6 fill-black opacity-70">
-          <button className="h-[14px]" onClick={clickPrev}>
+        <div className="pt-4 flex items-center justify-center space-x-4 fill-black opacity-70">
+          <button className="h-[14px]" onClick={handlePrev}>
             {icons[0].prev}
           </button>
-          <button className="h-[14px]" onClick={clickNext}>
+          <p className="pt-1 text-sm">
+            <span>
+              {currentIndex} / {totalIndex}
+            </span>
+          </p>
+          <button className="h-[14px]" onClick={handleNext}>
             {icons[0].next}
           </button>
-          <button className="opacity-70" onClick={playPause}>
+          <button className="opacity-70 pt-1" onClick={playPause}>
             {autoPlay ? icons[0].pause : icons[0].play}
           </button>
         </div>

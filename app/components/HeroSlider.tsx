@@ -15,6 +15,9 @@ type HeroSliderProps = {
 
 const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   const [autoPlay, setAutoPlay] = useState(true);
+  const [totalIndex, setTotalIndex] = useState(images?.length);
+  const [currentIndex, setCurrentIndex] = useState(1);
+
   const [clickPrev, setClickPrev] = useState<() => () => void | null>(() => () => null);
   const [clickNext, setClickNext] = useState<() => void | null>(() => () => null);
 
@@ -78,6 +81,9 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
         heroButton={true}
         autoPlay={autoPlay}
         setAutoPlay={setAutoPlay}
+        totalIndex={totalIndex}
+        currentIndex={currentIndex}
+        setCurrentIndex={setCurrentIndex}
       />
     </>
   );
