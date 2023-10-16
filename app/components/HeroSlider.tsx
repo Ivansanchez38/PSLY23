@@ -24,7 +24,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
       <Carousel
         autoPlay={true}
         swipeable={true}
-        showArrows={true}
+        showArrows={false}
         showIndicators={false}
         showThumbs={false}
         useKeyboardArrows={true}
@@ -58,7 +58,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
                 {icons[0].aesop}
               </h1>
               <div className="flex basis-auto ml-[16.6666666667%] mr-auto">
-                <Article id={0} index={index} />
+                <Article id={0} index={index} tabIndex={-1}/>
               </div>
             </div>
             <div className={`${index === 2 ? "w-1/2" : "w-full"}`}>

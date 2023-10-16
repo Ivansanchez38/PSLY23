@@ -3,7 +3,7 @@ import ArticleButton from "./ArticleButton";
 import { Id } from "../data/types";
 import { products } from "../data/products";
 
-const Article: React.FC<Id> = ({ id, index }) => {
+const Article: React.FC<Id> = ({ id, index, tabIndex }) => {
   const product = products.find((item) => item.id === id);
   if (!product) return <div>Image</div>;
 
@@ -13,15 +13,15 @@ const Article: React.FC<Id> = ({ id, index }) => {
     typeof product.heading === "string"
       ? product.heading
       : product.heading?.[index];
-      
+
   const subHeading =
     typeof product.subHeading === "string"
       ? product.subHeading
       : product.subHeading?.[index];
-      
+
   const para =
     typeof product.para === "string" ? product.para : product.para?.[index];
-    
+
   const buttonText =
     typeof product.buttonText === "string"
       ? product.buttonText
@@ -48,7 +48,13 @@ const Article: React.FC<Id> = ({ id, index }) => {
       <div className="pr-4 text-base">
         <p className="text-base leading-[1.7]">{para}</p>
       </div>
-      <ArticleButton text={buttonText} hero={product.hero} index={index} sliderButton={product.sliderButton} />
+      <ArticleButton
+        text={buttonText}
+        hero={product.hero}
+        index={index}
+        sliderButton={product.sliderButton}
+        tabIndex={tabIndex}
+      />
     </div>
   );
 };

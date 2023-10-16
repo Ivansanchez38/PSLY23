@@ -20,8 +20,8 @@ const SliderButton: React.FC<SliderButtonType> = ({
     <div className="block select-none">
     <div className="absolute z-50 -bottom-30 bg-[#fffef2] w-[99%]">
       <div className="pt-4 flex justify-center space-x-6 fill-black opacity-70">
-          <div onClick={clickPrev}>{icons[0].prev}</div>
-          <div onClick={clickNext}>{icons[0].next}</div>
+          <button onClick={clickPrev}>{icons[0].prev}</button>
+          <button onClick={clickNext}>{icons[0].next}</button>
       </div>
     </div>
       </div>

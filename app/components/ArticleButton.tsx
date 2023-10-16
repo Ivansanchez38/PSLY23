@@ -5,6 +5,7 @@ type ButtonProps = {
   text: string;
   hero?: boolean;
   index?: number;
+  tabIndex?: number;
   sliderButton?: boolean;
 };
 
@@ -12,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   text,
   hero = false,
   index,
+  tabIndex,
   sliderButton,
 }) => {
   const heroSlide = (hero && index === 0) || index === 1;
@@ -33,6 +35,7 @@ const Button: React.FC<ButtonProps> = ({
         className={`flex items-center ${
           sliderButton ? "space-x-1" : "justify-between"
         }`}
+        tabIndex={tabIndex}
       >
         <span
           className={`${
