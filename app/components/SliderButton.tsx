@@ -7,7 +7,7 @@ type SliderButtonType = {
   clickNext?: () => void;
   heroButton?: boolean;
   autoPlay?: boolean;
-  setAutoPlay: (value: boolean) => void;
+  setAutoPlay?: (value: boolean) => void;
 };
 
 const SliderButton: React.FC<SliderButtonType> = ({
@@ -21,7 +21,7 @@ const SliderButton: React.FC<SliderButtonType> = ({
   const buttonPosition = arrowIcon === "previous" ? "left-0" : "right-0";
 
   const playPause: () => void = () => {
-    setAutoPlay(!autoPlay);
+    setAutoPlay!(!autoPlay);
   };
 
   return heroButton ? (
