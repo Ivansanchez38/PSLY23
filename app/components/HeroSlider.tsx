@@ -21,12 +21,20 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   const [clickPrev, setClickPrev] = useState<() => () => void | null>(() => () => null);
   const [clickNext, setClickNext] = useState<() => void | null>(() => () => null);
 
+  if (autoPlay && images) {
+    setTimeout(() => {
+      const nextIndex = currentIndex % images.length + 1;
+      setCurrentIndex(nextIndex);
+    }, 6000);
+  }
+
   if (!images || images.length === 0) return <div>No images to display</div>;
 
   return (
     <>
       <Carousel
         autoPlay={autoPlay}
+        stopOnHover={false}
         swipeable={true}
         showArrows={false}
         showIndicators={false}
@@ -34,7 +42,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
         useKeyboardArrows={true}
         showStatus={false}
         infiniteLoop={true}
-        interval={5000}
+        interval={6000}
         centerMode
         centerSlidePercentage={100}
         // @ts-ignore
