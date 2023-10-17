@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import Article from "./Article";
@@ -21,12 +21,22 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   const [clickPrev, setClickPrev] = useState<() => () => void | null>(() => () => null);
   const [clickNext, setClickNext] = useState<() => void | null>(() => () => null);
 
-  if (autoPlay && images) {
-    setTimeout(() => {
-      const nextIndex = currentIndex % images.length + 1;
-      setCurrentIndex(nextIndex);
-    }, 6000);
-  }
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (autoPlay && images) {
+      timer = setInterval(() => {
+        const nextIndex = currentIndex % images.length + 1;
+        if (autoPlay) setCurrentIndex(nextIndex);
+      }, 6000);
+    }
+
+    return () => {
+      if (timer) {
+        clearInterval(timer);
+      }
+    };
+  }, [autoPlay, currentIndex, images]);
 
   if (!images || images.length === 0) return <div>No images to display</div>;
 
