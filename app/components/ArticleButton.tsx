@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <div
-      className={`mt-[30px] ${
+      className={`mt-[30px] min-w-md ${
         sliderButton
           ? "p-0"
           : `p-4 border border-solid ${
@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({
                 ? "border-white hover:bg-white hover:text-black"
                 : "hover:bg-[#333] hover:text-[#fffef2] hover:border-[#333] border-[rgba(51,51,51,0.2)]"
             }`
-      } w-[60%] transition-colors duration-300 ease-out group`}
+      } w-4/5 sm:w-[60%] transition-colors duration-300 ease-out group`}
     >
       <a
         href="#"

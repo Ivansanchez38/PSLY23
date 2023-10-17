@@ -29,9 +29,9 @@ const Article: React.FC<Id> = ({ id, index, tabIndex }) => {
 
   return (
     <div
-      className={`${id === 0 ? "pt-[110px] pb-[180px] pr-20" : "w-1/3 pb-20"} ${
+      className={`${id === 0 ? "pt-[110px] pb-[180px] pr-20" : " w-full md:w-1/3 pb-5 md:pb-20"} ${
         product.pr
-      } flex text-left mb-4 flex-col`}
+      } flex flex-col text-left mb-4`}
     >
       {product.heading && (
         <div className="font-semibold text-sm mb-5 leading-[1.7]">
@@ -41,7 +41,7 @@ const Article: React.FC<Id> = ({ id, index, tabIndex }) => {
       <div
         className={`${
           id === 0 ? "font-suss" : "font-zapf"
-        } font-medium text-3xl mb-[30px]`}
+        } font-medium text-2xl md:text-3xl mb-[30px]`}
       >
         <h2>{subHeading}</h2>
       </div>

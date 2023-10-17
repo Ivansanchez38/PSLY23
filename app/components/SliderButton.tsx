@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { icons } from "../data/icons";
 
 type SliderButtonType = {
@@ -24,8 +24,6 @@ const SliderButton: React.FC<SliderButtonType> = ({
   currentIndex,
   setCurrentIndex,
 }) => {
-  const buttonPosition = arrowIcon === "previous" ? "left-0" : "right-0";
-
   const playPause: () => void = () => {
     setAutoPlay!(!autoPlay);
   };
@@ -51,6 +49,8 @@ const SliderButton: React.FC<SliderButtonType> = ({
     clickNext && clickNext();
     addIndex();
   };
+
+  const buttonPosition = arrowIcon === "previous" ? "left-0" : "right-0";
 
   return heroButton ? (
     <div className="block select-none">

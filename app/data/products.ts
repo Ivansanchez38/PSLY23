@@ -63,8 +63,8 @@ export const products: ProductType[] = [
     para: "Each of the six Othertopias fragrances is a doorway to another realm, real and imagined. Ouranon—a woody, spicy, resinous scent, distinguished by Frankincense, Hay and Myrrh—is the final chapter of that journey.",
 
     row: "flex-col md:flex-row",
-    pl: "pl-20",
-    pr: "pl-20",
+    pl: "pl-0 md:pl-20",
+    pr: "pl-5 md:pl-20",
     url: "",
     buttonText: "Step inside Ouranon",
   },
@@ -75,8 +75,8 @@ export const products: ProductType[] = [
     para: "Unorthodox, evocative, and refined, Aesop fragrances are sensory bridges to memory and connection points to those around us.",
 
     row: "flex-col md:flex-row",
-    pl: "pl-20",
-    pr: "pl-20",
+    pl: "pl-0 md:pl-20",
+    pr: "pl-5 md:pl-20",
     url: {
       url1: "https://www.aesop.com/u1nb1km7t5q7/6fS7KvwhtoYYrcc6zwJilY/4e2cb9b2e23b98648aae11ae7d0fa4e0/Aesop_Fragrance_Ouranon_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
       url2: "https://www.aesop.com/u1nb1km7t5q7/5JnjTiylieRSYutnMFeyVK/0c78718d9172cd5384064512e06f0b52/Aesop_Fragrance_Gloam_Eau_de_Parfum_50mL_Web_Front_Large_900x878px.png",
@@ -113,8 +113,8 @@ export const products: ProductType[] = [
     para: "Our consultants have long combined complementary formulations to effect additional benefits for the skin. Incorporate this time-honoured practice into your regimen with our recommended bundles.",
 
     row: "flex-col md:flex-row-reverse",
-    pl: "pl-0 pr-20",
-    pr: "pr-20",
+    pl: "pl-0 md:pr-20",
+    pr: "pl-5 md:pl-0 md:pr-20",
     url: "https://www.aesop.com/u1nb1km7t5q7/2ck6SrjYyPRBPhURWsSMEn/b0e30e9520ff0afd24b9b78a1eeb858e/Aesop_Always_On_Homepage_Secondary_Skin_Care_Blending_Mid_Mobile_640x360px.jpg",
     buttonText: "Browse Skin Care Bundles",
   },
@@ -125,8 +125,8 @@ export const products: ProductType[] = [
     para: "Our Parsley Seed Skin Care range provides potent doses of anti-oxidant rich ingredients in formulations suited to all skin types. They are especially recommended for those in urban environments, to fortify the skin against the damaging effects of free radicals.",
 
     row: "flex-col md:flex-row",
-    pl: "pl-20",
-    pr: "pl-20",
+    pl: "pl-0 md:pl-20",
+    pr: "pl-5 md:pl-20",
     url: {
       url1: "https://www.aesop.com/u1nb1km7t5q7/5vuGB9OlPfCwhd0di4sqjF/8c66786e2c82846e7e86c2e234c7c0e5/Aesop_Kits_Parsley_Seed_Anti-Oxidant_Skin_Care_Kit_Web_Large_1584x962px.png",
       url2: "https://www.aesop.com/u1nb1km7t5q7/4fclKcB1FNLpV5wHmZkAQ6/c6c62862184703d834efbc07077b86cb/Aesop_Skin_Parsley_Seed_Anti-Oxidant_Eye_Cream_10mL_Web_Large_901x478px.png",
@@ -171,7 +171,7 @@ export const products: ProductType[] = [
 
     row: "flex-col md:flex-row",
     pl: "pl-20",
-    pr: "pl-20",
+    pr: "pl-5 md:pl-20",
     url: {
       url1: "https://www.aesop.com/u1nb1km7t5q7/5U8aDtbYkybIgilkq1tJ7w/41bdf1c8b1eb863fd9ac7cde0ee1c64a/Aesop_Fashion_Walk_II_Mid_Desktop_2560x1440px.jpg",
       url2: "https://www.aesop.com/u1nb1km7t5q7/4StXXhzwKgYMIFgTSIOgUk/8c3406be7d5c1194b0e267b773fa66e6/Aesop_MOKO_II_Mid_Desktop_2560x1440px.jpg",
@@ -195,7 +195,7 @@ export const products: ProductType[] = [
 
     row: "flex-col md:flex-row-reverse pb-14",
     pl: "pl-0 pr-20",
-    pr: "pr-20",
+    pr: "pl-5 md:pl-0 md:pr-20",
     url: "https://www.aesop.com/u1nb1km7t5q7/6a0rFYweQvQusUfEHpowUJ/32611c5a1ea838756fd635261d88d2db/Aesop-Generic-Images-Facial-Appointments-1-Mid-Desktop-2560x1440px.jpg",
     buttonText: "Learn more",
   },

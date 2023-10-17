@@ -15,7 +15,7 @@ type HeroSliderProps = {
 
 const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   const [autoPlay, setAutoPlay] = useState(true);
-  const [totalIndex, setTotalIndex] = useState(images?.length);
+  const [totalIndex] = useState(images?.length);
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const [clickPrev, setClickPrev] = useState<() => () => void | null>(() => () => null);
@@ -45,7 +45,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`h-[80vh] flex flex-col md:flex-row w-full justify-between relative`}
+            className={`h-screen md:h-[80vh] flex flex-col md:flex-row w-full justify-between relative`}
           >
             <div
               className={`${
