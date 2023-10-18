@@ -2,6 +2,7 @@ import React from "react";
 import { Id } from "../data/types";
 import { products } from "../data/products";
 import ImageCarousel from "./ImageCarousel";
+import Image from "next/image";
 // import Article from "./Article";
 
 const Still: React.FC<Id> = ({ id }) => {
@@ -21,7 +22,7 @@ const Still: React.FC<Id> = ({ id }) => {
           </video>
         ) : (
           <div className="object-cover">
-            <img src={product.url} alt="image" className="w-full h-full" />
+            <Image src={product.url} alt="image" width={1080} height={1080} className="w-full h-full" />
           </div>
         )
       ) : typeof product.url === "object" &&

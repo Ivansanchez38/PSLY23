@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import Article from "./Article";
 import { icons } from "../data/icons";
 import SliderButton from "./SliderButton";
+import Image from "next/image";
 
 type ImageType = {
   url: string;
@@ -81,9 +82,11 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
               </div>
             </div>
             <div className={`${index === 2 ? "w-1/2" : "w-full"}`}>
-              <img
+              <Image
                 src={image.url}
                 alt={`Image ${index}`}
+                width={1080}
+                height={1080}
                 className="object-cover h-full w-full"
               />
             </div>
