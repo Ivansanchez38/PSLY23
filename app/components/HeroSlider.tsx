@@ -68,12 +68,12 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
                 index === 2
                   ? "block bg-[#f6f5e8] text-black"
                   : "text-white absolute"
-              } w-1/2 z-50  flex justify-between`}
+              } w-1/2 z-50 flex justify-between`}
             >
               <h1
                 className={`${
                   index === 2 ? "fill-black" : "fill-white"
-                } top-24 left-10 relative`}
+                } top-24 left-10 relative hidden md:block`}
               >
                 {icons[0].aesop}
               </h1>
