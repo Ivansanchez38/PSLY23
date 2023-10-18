@@ -12,3 +12,5 @@ export const navItems1 = [
 ];
 
 export const navItems2 = ["Log in", "Cabinet", "Cart"];
+
+export const navItemsSmall = ["Shop","Read","Stores"];

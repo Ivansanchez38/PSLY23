@@ -3,11 +3,11 @@ import React from "react";
 const Topbar = () => {
   return (
     <header className="text-center">
-      <div className="bg-[#c2c2af] pt-3 pb-2 text-sm leading-5 underline-offset-2 ">
+      <div className="bg-[#c2c2af] pt-3 pb-2 text-sm leading-5 underline-offset-2 px-2 md:px-0 ">
         Trained Aesop consultants are available to provide bespoke skin care
         advice.{" "}
         <span>
-          <a className="decoration-1 hover:underline font-semibold" href="#">
+          <a className="underline decoration-1 md:no-underline hover:underline font-semibold" href="#">
             Book a video consultation
           </a>
         </span>

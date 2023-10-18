@@ -24,18 +24,15 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
-    if (autoPlay && images) {
+    if (images) {
       timer = setInterval(() => {
         const nextIndex = currentIndex % images.length + 1;
         if (autoPlay) setCurrentIndex(nextIndex);
       }, 6000);
     }
 
-    return () => {
-      if (timer) {
-        clearInterval(timer);
-      }
-    };
+    return () => { if (timer) clearInterval(timer); };
+
   }, [autoPlay, currentIndex, images]);
 
   if (!images || images.length === 0) return <div>No images to display</div>;
