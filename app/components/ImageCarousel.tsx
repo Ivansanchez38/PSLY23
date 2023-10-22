@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import SliderButton from "./SliderButton";
-import Image from "next/image";
+import ScreenWidth from "../utils/ScreenSize"
 
 type ImageCarouselProps = {
   images?: { url: string }[];
@@ -51,6 +51,16 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <SliderButton arrowIcon={arrowIcon} />
     </button>
   );
+  const currentWidth = ScreenWidth();
+  console.log(currentWidth)
+
+  // const centerSlideHandler = () => {
+  //   if(currentWidth < 738){
+  //     const centerSlide = 70
+  //   }else{
+  //     centerSlidePercentage
+  //   }
+  // }
 
   return (
     <Carousel
@@ -77,11 +87,9 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
           key={index}
           className={`${width} ${height} flex flex-col justify-end text-center`}
         >
-          <Image
+          <img
             src={image.url}
-            alt={`Image ${index}`}
-            width={1080}
-            height={1080}
+            alt={`Image ${index+1}`}
             className="h-auto w-auto"
           />
           {!scroller && title ? (

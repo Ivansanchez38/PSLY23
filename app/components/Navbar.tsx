@@ -73,7 +73,7 @@ const Navbar = () => {
               Cart
             </li>
             <li>
-              <div className="fill-white">{icons[0].hamburger}</div>
+              <div className="fill-white pt-1">{icons[0].hamburger}</div>
             </li>
           </ul>
         </div>
