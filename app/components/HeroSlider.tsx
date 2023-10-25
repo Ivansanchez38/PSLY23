@@ -19,21 +19,25 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
   const [totalIndex] = useState(images?.length);
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  const [clickPrev, setClickPrev] = useState<() => () => void | null>(() => () => null);
-  const [clickNext, setClickNext] = useState<() => void | null>(() => () => null);
+  const [clickPrev, setClickPrev] = useState<() => () => void | null>(
+    () => () => null
+  );
+  const [clickNext, setClickNext] = useState<() => void | null>(
+    () => () => null
+  );
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
     if (images) {
       timer = setInterval(() => {
-        const nextIndex = currentIndex % images.length + 1;
+        const nextIndex = (currentIndex % images.length) + 1;
         if (autoPlay) setCurrentIndex(nextIndex);
       }, 6000);
     }
-
-    return () => { if (timer) clearInterval(timer); };
-
+    return () => {
+      if (timer) clearInterval(timer);
+    };
   }, [autoPlay, currentIndex, images]);
 
   if (!images || images.length === 0) return <div>No images to display</div>;
@@ -61,14 +65,16 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`h-screen md:h-[80vh] flex flex-col md:flex-row w-full justify-between relative`}
+            className={`md:h-[80vh] flex ${
+              index == 2 ? "flex-col-reverse" : "flex-col"
+            } flex-col-reverse md:flex-row w-full justify-end md:justify-between relative`}
           >
             <div
               className={`${
                 index === 2
                   ? "block bg-[#f6f5e8] text-black"
-                  : "text-white absolute"
-              } w-1/2 z-50 flex justify-between`}
+                  : "text-white block md:absolute"
+              } w-full md:w-1/2 z-50 flex justify-between`}
             >
               <h1
                 className={`${
@@ -78,10 +84,10 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ images }) => {
                 {icons[0].aesop}
               </h1>
               <div className="flex basis-auto ml-[16.6666666667%] mr-auto">
-                <Article id={0} index={index} tabIndex={-1}/>
+                <Article id={0} index={index} tabIndex={-1} />
               </div>
             </div>
-            <div className={`${index === 2 ? "w-1/2" : "w-full"}`}>
+            <div className={`${index === 2 ? "w-full md:w-1/2" : "w-full"}`}>
               <Image
                 src={image.url}
                 alt={`Image ${index}`}

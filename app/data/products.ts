@@ -8,6 +8,7 @@ export type ProductType = {
   pr?: string;
   hero?: boolean;
   url?: string | Record<string, string>;
+  smallUrl?: string | Record<string, string>;
   title?: Record<number, string>;
   buttonText: string | Record<string, string>;
   sliderButton?: boolean;
@@ -46,6 +47,11 @@ export const products: ProductType[] = [
       url1: "https://www.aesop.com/u1nb1km7t5q7/u3xwLdwyHOhnFjFDnp9xh/78ae09241ad257722205bb61089ab46a/Aesop_Othertopias_2023_Web_Homepage_3_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
       url2: "https://www.aesop.com/u1nb1km7t5q7/6gh1BfrwUWExsAYoI9MhxK/56b784ae98ed3421486a09e0c112bdea/Aesop_Bar_Soaps_2023_Web_Homepage_1_Primary_Full_Bleed_Desktop_2880x1044px.jpg",
       url3: "https://www.aesop.com/u1nb1km7t5q7/4SUhr7BGma03r1oHxGHgpY/736e8b4997372edbecf26d60044caabf/Aesop_PSAOIS_2023_Web_Homepage_Primary_50-50_Desktop_1440x1500px.jpg",
+    },
+    smallUrl: {
+      url1: "https://www.aesop.com/u1nb1km7t5q7/WZZz51O9MbH6ZAROLHCfq/685c5a90bf9889bdf6a5ff59f2df2556/Aesop_Othertopias_2023_Web_Homepage_3_Primary_Full_Bleed_Mobile_640x640px.jpg",
+      url2: "https://www.aesop.com/u1nb1km7t5q7/4aIoyZyAQvQO8NLlxB1yJ1/691bb63d4c57ba13dfa9e2d6b7fe1ebe/Aesop_Bar_Soaps_2023_Web_Homepage_1_Primary_Full_Bleed_Mobile_640x640px.jpg",
+      url3: "https://www.aesop.com/u1nb1km7t5q7/6RGVJ6lzt9hHpnwVvWU96O/bce5b71553c26dd5f3f739e06803ee42/Aesop_PSAOIS_2023_Web_Homepage_Primary_50-50_Mobile_640x640px.jpg",
     },
     width: "w-full",
     buttonText: {

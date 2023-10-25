@@ -51,8 +51,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
       <SliderButton arrowIcon={arrowIcon} />
     </button>
   );
-  const currentWidth = ScreenWidth();
-  console.log(currentWidth)
+  // const currentWidth = ScreenWidth();
+  // console.log(currentWidth)
 
   // const centerSlideHandler = () => {
   //   if(currentWidth < 738){

@@ -29,7 +29,7 @@ const Article: React.FC<Id> = ({ id, index, tabIndex }) => {
 
   return (
     <div
-      className={`${id === 0 ? "pt-[110px] pb-[180px] pr-20" : " w-full md:w-1/3 pb-5 md:pb-20"} ${
+      className={`${id === 0 ? "pt-[110px] pb-4 md:pb-[180px] pr-10 md:pr-20" : " w-full md:w-1/3 pb-5 md:pb-20"} ${
         product.pr
       } flex flex-col text-left mb-4`}
     >
