@@ -15,14 +15,14 @@ type HeroProps = {
 
 const Hero: React.FC<HeroProps> = () => {
   const product = products.find((item) => item.id === 0);
-  if (!product) return <div>Image</div>;
   const currentWidth = ScreenWidth();
-
-  const [useLargeImages, setUseLargeImages] = useState(true);
+  const [useLargeImages, setUseLargeImages] = useState(currentWidth >= 768);
 
   useEffect(() => {
     setUseLargeImages(currentWidth >= 768);
   }, [currentWidth]);
+
+  if (!product) return <div>Image</div>;
 
   return (
     <div className="bg-[#333333] text-center">
