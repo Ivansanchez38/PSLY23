@@ -16,7 +16,7 @@ type HeroProps = {
 const Hero: React.FC<HeroProps> = () => {
   const product = products.find((item) => item.id === 0);
   const currentWidth = ScreenWidth();
-  const [useLargeImages, setUseLargeImages] = useState(currentWidth >= 768);
+  const [useLargeImages, setUseLargeImages] = useState(true);
 
   useEffect(() => {
     setUseLargeImages(currentWidth >= 768);
